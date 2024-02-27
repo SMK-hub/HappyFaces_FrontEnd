@@ -1,0 +1,135 @@
+/* SignInAdmin.css */
+.sign-in-orphanage{
+  display:flex;
+  flex-direction: column;
+  background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85% );
+  height: 100vh;
+}
+.sign-in-orphanage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%,  #FF0076 51.55%, #590FB7 90.85% );
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 5vh auto;
+}
+.orphanageSignIn{
+  display:flex;
+  flex-direction: column;
+}
+
+.sign-in-orphanage-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 76px;
+  margin:auto;
+  color: #333;
+  position: relative;
+  align-content: center;
+}
+
+.sign-in-orphanage-form {
+  display: flex;
+  flex-direction: column;
+  width: 37%;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  margin:auto;
+}
+
+.orphanage-form-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.orphanage-form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.orp-button {
+  width: 21%;
+  padding: 15px;
+  cursor: pointer;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #050505;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.orphanage-form-button:hover {
+  background-image:linear-gradient( 106.37deg, #f3c6f1 29.63%, #ffcfd1 51.55%, #ffe1bc 90.85% );
+}
+
+.orphanage-back-link {
+  margin-top: 20px;
+  color: #774c75;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.orphanage-back-link:hover {
+  color: #4c2d07;
+}
+
+.orphanage-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.orphanage-forgot-password-link {
+  color: #774c75;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.orphanage-forgot-password-link:hover {
+  color: #4c2d07;
+}
+
+.orphanage-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.orphanage-popup-inner {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.orphanage-form-OTPBackbuttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; 
+}
+
+.orphanage-form-back.buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px; 
+}

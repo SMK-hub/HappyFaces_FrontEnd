@@ -1,0 +1,62 @@
+/* Events.css */
+
+.main-event {
+  flex: 1;
+  padding: 20px;
+}
+
+.event-container {
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #bd89b6; /* Make the border more bold */
+  border-radius: 30px; /* Add curvature to the border */
+}
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.event-table th,
+.event-table td {
+  border: 2px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.new-event-button,
+.cancel-event-button {
+  background-color: #bb76af;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.new-event-button:hover,
+.cancel-event-button:hover {
+  background-color: #ce43c2;
+}
+
+.button-container {
+  text-align: right;
+}
+
+/* Center the "EVENTS" heading */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.event-heading {
+  text-align: center;
+  font-size: 50px;
+  color: #050505; /* Match the border color */
+  margin-bottom: 150px;
+  font-family: 'Montserrat';
+}

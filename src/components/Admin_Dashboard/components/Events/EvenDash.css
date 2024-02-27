@@ -1,0 +1,206 @@
+.OrphDash {
+    /* padding-top: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; /* Center items vertically by default */
+  
+    /* Additional styling for spacing and margins */
+    margin-top: 2rem;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .OrphDash {
+      justify-content: flex-start;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .OrphDash {
+      align-items: center;
+      /* Additional styling for smaller screens if needed */
+    }
+  }
+  
+  /* Additional styling for the table if needed */
+  .OrphDash table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .OrphDash table, .OrphDash th, .OrphDash td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .OrphDash th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Add more styling as needed */
+  
+  /* Add these styles to your existing OrphDash.css file */
+
+/* Add these styles to your existing OrphDash.css file */
+
+/* Add these styles to your existing OrphDash.css file */
+
+/* OrphDash.css */
+
+/* Additional styling for the dropdown search bar */
+/* OrphDash.css */
+
+/* Additional styling for the dropdown search bar */
+.OrphDash label {
+  margin-right: 8px;
+  margin-bottom: 8px; /* Add margin at the bottom */
+}
+
+.OrphDash select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+/* OrphDash.css */
+
+/* Add styling for the modal */
+/* OrphDash.css */
+
+/* Add styling for the modal */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: lightcyan;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left; /* Align text to the left */
+  max-width: 400px; /* Adjust the maximum width as needed */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Add styling for links */
+.modal-content a {
+  display: block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: black; /* Adjust link color as needed */
+}
+
+/* Additional styling for consistent alignment */
+.modal-content p {
+  margin: 8px 0; /* Add margin to paragraphs for spacing */
+}
+
+.modal-content div {
+  margin-top: 8px; /* Add margin to divs for spacing */
+}
+
+/* Center the title */
+.modal-content .field-name {
+  font-weight: bold;
+  color: #333; /* Dark color */
+}
+
+/* Styling for field values */
+.modal-content .field-name span {
+  font-weight: normal;
+  color: #555; /* Slightly darker color than field name */
+}
+
+.modal-content h3 {
+  text-align: center;
+}
+
+
+.smallButton {
+  padding: 5px;
+  font-size: 12px;
+  background-color: gray;
+}
+
+/* OrphDash.css */
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  font-size: 10px;
+  margin: 0 3px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+.pagination-button.active {
+  background-color: black;
+  color: white;
+}
+
+
+.popup {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

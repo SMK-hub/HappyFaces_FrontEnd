@@ -1,0 +1,87 @@
+.orphanage-heading {
+  text-align: center;
+  margin: auto;
+}
+
+.orphanage-editContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.orphanage-profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ce7fb6;
+  height: 400px;
+  border-radius: 15px;
+  min-width: 550px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.orphanage-profile-picture {
+  margin-right: 50px;
+}
+
+.orphanage-profile-details {
+  text-align: left;
+}
+
+.orphanage-profile-picture img {
+  display: block;
+  margin: 0;
+}
+
+.orphanage-profile-buttons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.orphanage-edit-profile-button,
+.orphanage-change-password-button {
+  background-color: #be72ab;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.orphanage-edit-profile-button:hover,
+.orphanage-change-password-button:hover {
+  background-color: #a14094;
+}
+
+.orphanage-profile-details button {
+  background-color: #d69dca;
+}
+
+.orphanage-profile-details label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.orphanage-profile-details input[type="text"],
+.orphanage-profile-details input[type="email"],
+.orphanage-profile-details input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.orphanage-profile-details input[type="text"]:focus,
+.orphanage-profile-details input[type="email"]:focus,
+.orphanage-profile-details input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}

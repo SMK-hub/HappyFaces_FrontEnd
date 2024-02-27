@@ -1,0 +1,164 @@
+/* :root {
+    --w: 12rem;
+    --d: calc(var(--w) / 3);
+    --l: 4px;
+    --a: 1rem;
+    --t: 1s;
+  }
+  
+  * {
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-transform: inherit;
+  }
+  
+  .registration,
+  .registration :not(script):not(style),
+  ::before {
+    display: grid;
+  }
+  
+  .registration {
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(100%, var(--w)));
+    place-content: center;
+    background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85% );
+    font: 900 1.25em/1.25 sans-serif;
+    text-align: center;
+  }
+  article {
+    --m: calc(.5 * (var(--n) - 1));
+    --abs: max(calc(var(--i) - var(--m)), calc(var(--m) - var(--i)));
+    --val: calc(var(--abs) * (1 + .5 * var(--i)) / var(--n));
+    --dt0: calc(var(--val) * var(--t));
+    --dt1: calc((var(--val) + 1) * var(--t));
+    --dt2: calc((var(--val) + 1.5) * var(--t));
+    --dt3: calc((var(--val) + 2) * var(--t));
+    --dt4: calc((var(--val) + 2.5) * var(--t));
+    --dt5: calc((var(--val) + 3) * var(--t));
+    overflow: hidden;
+    padding-bottom: var(--a);
+    backface-visibility: hidden;
+    transform: perspective(25em);
+    background: #fff content-box;
+    filter: drop-shadow(4px 4px 13px);
+    animation: card var(--t) ease-out var(--dt0) backwards, 
+               cost var(--t) var(--dt4) backwards;
+  }
+  
+  article::before,
+  article::after,
+  button {
+    --j: 1;
+    --sgn-j: calc(2 * var(--j) - 1);
+    --not-j: calc(1 - var(--j));
+    --mask: linear-gradient(calc(var(--sgn-j) * 90deg), 
+              red 33.333%, transparent 66.667%) calc(var(--not-j) * 100%) / 300%;
+  }
+  @keyframes card {
+    0% {
+      transform: perspective(25em) rotateY(0.5turn);
+    }
+  }
+  
+  headers {
+    grid-gap: var(--a);
+    padding: calc(2 * var(--a)) 0.5em var(--a);
+    transform-origin: 100% 100%;
+    background: linear-gradient(var(--grad));
+    color: #812525;
+    counter-reset: cost var(--cost);
+    animation: head var(--t) ease-out var(--dt1) backwards;
+  
+    &::before {
+      place-self: center;
+      place-content: center;
+      border: solid var(--l) currentcolor;
+      width: var(--d);
+      height: var(--d);
+      border-radius: 50%;
+      animation: ring var(--t) ease-out var(--dt3) backwards;
+      content: '$' counter(cost);
+    }
+  
+    &::after {
+      height: var(--l);
+      background: currentcolor;
+      clip-path: inset(0 round var(--l));
+      animation: line var(--t) ease-out var(--dt2) backwards;
+      content: '';
+    }
+  }
+  
+  @keyframes head {
+    0% {
+      transform: translateX(-100%) skewX(35deg);
+    }
+  }
+  
+  @keyframes ring {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes line {
+    0% {
+      clip-path: inset(0 50% round var(--l));
+    }
+  }
+  
+  h3 {
+    &::before,
+    &::after {
+      place-self: center;
+      -webkit-mask: var(--mask);
+      mask: var(--mask);
+      animation: text var(--t) ease-out var(--dt5) backwards;
+    }
+  
+    &::before {
+      --j: 0;
+      animation-name: text, move;
+      content: attr(data-name);
+    }
+  
+    &::after {
+      font-size: 0.6em;
+      font-weight: 100;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(50%);
+    }
+  }
+  
+  section {
+    margin-bottom: calc(-1 * var(--a));
+    border-bottom: solid var(--a) transparent;
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--a)), 50% 100%, 0 calc(100% - var(--a)));
+  }
+  
+  button {
+    place-content: center;
+    line-height: 3;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    cursor: pointer;
+    animation: text var(--t) ease-out var(--dt2) backwards;
+  }
+  
+  @keyframes text {
+    0% {
+      -webkit-mask-position: calc(var(--j) * 100%);
+      mask-position: calc(var(--j) * 100%);
+    }
+  }
+   */

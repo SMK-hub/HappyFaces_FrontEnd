@@ -1,0 +1,58 @@
+/* Payment.css */
+.payment-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+ 
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  width: 90%; /* Increase width */
+  max-width: 1000px; /* Optionally set a maximum width */
+}
+ 
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+ 
+.payment-table-container {
+  max-height: 400px; /* Set maximum height for the table container */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+ 
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+ 
+.payment-table th,
+.payment-table td {
+  border: 1px solid #111010;
+  padding: 10px;
+  text-align: left;
+}
+ 
+.payment-table th {
+  background-color: #c99fb2;
+}
+ 
+.total-amount {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+ 
+.total-amount p {
+  margin-right: 10px;
+}
+ 
+.total-amount span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+ 

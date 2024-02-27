@@ -1,0 +1,170 @@
+.sign-in-admin {
+  background-image: linear-gradient(106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-image: linear-gradient(to right top, #ffe1bc, #ffdcbf, #ffd8c2, #ffd5c7, #ffd2cb, #ffcfce, #ffcdd2, #ffcbd6, #ffc9db, #fdc7e2, #f9c6e9, #f3c6f1);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 5vh auto;
+}
+
+.sign-in-admin-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 76px;
+  margin: auto;
+  color: #333;
+  position: relative;
+  align-content: center;
+}
+
+.sign-in-admin-form {
+  display: flex;
+  flex-direction: column;
+  width: 37%;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.admin-form-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.admin-form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.in-button {
+  width: 23%;
+  padding: 15px;
+  cursor: pointer;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #050505;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-form-button:hover {
+  background-image: linear-gradient(106.37deg, #f3c6f1 29.63%, #ffcfd1 51.55%, #ffe1bc 90.85%);
+}
+
+.admin-back-link {
+  margin-top: 20px;
+  color: #774c75;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.admin-back-link:hover {
+  color: #4c2d07;
+}
+
+.admin-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-forgot-link {
+  color: #774c75;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.admin-forgot-link:hover {
+  color: #4c2d07;
+}
+
+.admin-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Adjust the width as needed */
+  max-width: calc(100% - 40px); /* Ensure it doesn't exceed the viewport width minus some padding */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.popup-inner {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+}
+
+.forgot-password-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-forgot-password-popup h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.admin-forgot-password-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-forgot-password-popup label {
+  margin-bottom: 5px;
+}
+
+.admin-forgot-password-popup input[type="email"],
+.admin-forgot-password-popup input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.admin-forgot-password-popup .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.admin-forgot-password-popup .form-buttons button {
+  padding: 8px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #cfb7cf;
+  color: white;
+}
+
+.admin-forgot-password-popup .form-buttons button:hover {
+  background-color: #cfb7cf;
+}

@@ -1,0 +1,23 @@
+.MainDashboard{
+    margin-bottom:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: large;
+}
+
+@media screen and (max-width: 1200px) {
+    .MainDash{
+        justify-content:flex-start;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .MainDash{
+        align-items: center;
+    }
+}
+
+

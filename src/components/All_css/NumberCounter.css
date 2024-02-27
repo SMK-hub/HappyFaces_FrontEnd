@@ -1,0 +1,36 @@
+.counter-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top: 20px; */
+    height: 300px; /* Adjust the height as needed */
+    /* background-color : #C0C0C0; */
+    background-image: url("https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    color: black; /* Text color on top of the background */
+
+  }
+  
+  .counter-item {
+    text-align: center;
+  }
+  
+  .counter {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .counter-title {
+    font-size: 2.0em; /* Adjust the font size as needed */
+    font-family: 'Oswald', sans-serif; /* Specify your desired font family */
+    font-weight: bold;
+  }
+  
+  /* Additional styles for better readability */
+  p {
+    margin: 0;
+  }
+  
+  

@@ -1,0 +1,151 @@
+/* Events.css */
+
+.main-events{
+  flex: 1;
+    padding: 20px;
+    justify-content: center;
+}
+
+.eventContainer {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #e27dc9;
+  border-radius: 8px;
+}
+
+.event-table { 
+  width: 10%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.event-table th, .event-table td {
+  border: 2px solid #ddd;
+  /* stroke: rgb(20, 88, 147); */
+  stroke-width: 4rem;
+  padding: 10px;
+  text-align: left;
+}
+
+.new-event-button, .cancel-event-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.new-event-button:hover, .cancel-event-button:hover {
+  background-color: #0056b3;
+}
+
+.button-container {
+  text-align: right;
+}
+
+/* Additional styling for layout */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Edit icon */
+.edit-icon {
+  color: #0a0a0a; /* Blue color */
+  cursor: pointer;
+}
+
+/* View icon */
+.view-icon {
+  color: #28a745; /* Green color */
+  cursor: pointer;
+}
+
+/* Cancel icon */
+.cancel-icon {
+  color: #dc3545; /* Red color */
+  cursor: pointer;
+}
+
+/* Styling for the dialog content */
+.MuiDialog-paper {
+  width: 500px; /* Adjust width as needed */
+  max-height: 80vh; /* Set maximum height */
+}
+
+/* Styling for the title of the dialog */
+.MuiDialogTitle-root {
+  background-color: #be9ac3; /* Set background color */
+  padding: 16px; /* Add padding */
+  font-weight: bold; /* Set font weight */
+}
+
+/* Styling for the content of the dialog */
+.MuiDialogContent-root {
+  padding: 16px; /* Add padding */
+}
+
+/* Styling for the list of interested persons */
+.MuiDialogContent-root ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for each item in the list of interested persons */
+.MuiDialogContent-root ul li {
+  margin-bottom: 8px; /* Add spacing between items */
+}
+
+/* Styling for the close button */
+.MuiDialogActions-root {
+  padding: 16px; /* Add padding */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Styling for the close button */
+.MuiButton-root {
+  margin-left: 8px; /* Add spacing between buttons */
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Add backdrop blur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above other elements */
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #fff; /* White border */
+  border-top-color: transparent; /* Transparent top border */
+  animation: rotate 1s linear infinite; /* Spin animation */
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* .AppGlass {
+  display: flex;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px #ccc;
+} */
+
+/* Add any other styles as needed */
+
+
+

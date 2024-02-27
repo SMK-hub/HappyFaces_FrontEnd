@@ -1,0 +1,43 @@
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    border: 4px solid #831898;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px 0;
+  }
+  
+  textarea {
+    height: 80px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #c777b9;
+    color: #fff;
+    border: 1px solid #101112;
+    border-radius: 45px;
+  }
+  
+  button:hover {
+    background-color: #b300b3;
+    border-color: #b300b3;
+  }
+  

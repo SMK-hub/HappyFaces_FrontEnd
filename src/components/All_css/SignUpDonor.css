@@ -1,0 +1,92 @@
+/* SignInAdmin.css */
+.sign-up-donor{
+  background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85% );
+  height: 110vh;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.sign-up-donor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85% );
+
+  }
+  
+  .sign-up-donor-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    left: 520px;
+    margin-top: 89px;
+  }
+  
+  .sign-up-donor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 39%;
+    position: relative;
+    left: 362px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form-button {
+    width: 30%;
+    padding: 15px;
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-color: #007bff;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    
+}
+  
+  .back-link:hover {
+    color: #e81470;
+  }
+  
+  .form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  

@@ -1,0 +1,47 @@
+.photos-container {
+    border: 2px solid #e784da;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .file-upload-label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .uploaded-files {
+    margin: 10px 0;
+  }
+  
+  .ok-button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #b478aa;
+    color: #fff;
+    border: 1px solid #dd49c9;
+    border-radius: 5px;
+  }
+  
+  .ok-button:hover {
+    background-color: #b300b3;
+    border-color: #b300b3;
+  }
+  
+  .remove-button {
+    margin-left: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #ff7675;
+    color: #fff;
+    border: 1px solid #ff7675;
+    border-radius: 3px;
+  }
+  
+  .remove-button:hover {
+    background-color: #d63031;
+    border-color: #d63031;
+  }
+  

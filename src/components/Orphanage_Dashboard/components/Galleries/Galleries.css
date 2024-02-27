@@ -1,0 +1,24 @@
+/* Styles for the Upload button */
+.upload-button {
+  border: 0;
+  background: none;
+}
+
+.upload-button > div {
+  margin-top: 8px;
+}
+
+/* Styles for the modal */
+.modal-image {
+  width: 10%;
+}
+
+
+/* .ant-modal-wrap {
+  z-index: 0; 
+} */
+/* 
+.modal {
+  position: absolute ;
+  z-index: 1 ;
+} */

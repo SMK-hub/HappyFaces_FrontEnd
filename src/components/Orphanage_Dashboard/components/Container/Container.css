@@ -1,0 +1,94 @@
+/* MyContainer.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px;
+  border: 2px solid #e681c7;
+  border-radius: 8px;
+  min-width: 60%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.head {
+  text-align: center;
+  font-size:larger;
+  font-family: 'Anton', sans-serif; /* Added font-family */
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.info-title {
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #ddb5df;
+}
+
+.info-detail {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.verification-button {
+  padding: 5px 10px; /* Adjusted padding for the verification button */
+  background-color: #d69dca; /* Green color for verified button */
+  color: #0f0f0f;
+  border: 1px solid #bb51b6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gallery-button {
+  padding: 5px 10px; /* Adjusted padding for the verification button */
+  background-color: #d69dca; /* Green color for verified button */
+  color: #000000;
+  border: 1px solid #e261c6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.verification-button:hover {
+  background-color: #d69dca;
+  border-color: #b14b9b;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif; /* Added font-family */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #d69dca;
+  color: #0f0f0f;
+  border: 1px solid #eb6cd6;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #b300b3;
+  border-color: #b300b3;
+}

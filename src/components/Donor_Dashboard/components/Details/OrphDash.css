@@ -1,0 +1,210 @@
+.OrphDash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .OrphDash {
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .OrphDash {
+    align-items: center;
+  }
+}
+
+.OrphDash table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.OrphDash-inside {
+  display: flex;
+  padding: 20px;
+}
+
+.OrphDash table,
+.OrphDash th,
+.OrphDash td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+.OrphDash th {
+  background-color: #c99fb2;
+}
+
+.OrphDash label {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.OrphDash select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: lightcyan;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #888;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-content a {
+  display: block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.modal-content p {
+  margin: 8px 0;
+}
+
+.modal-content div {
+  margin-top: 8px;
+}
+
+.modal-content .field-name {
+  font-size: 14px; /* Decrease the font size */
+  font-family: Arial, sans-serif; /* Change the font family */
+  font-weight: bolder;
+  color: #0c010a;
+}
+
+.modal-content .field-name span {
+  font-weight: normal;
+  color: #555;
+}
+
+.modal-content h3 {
+  text-align: center;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.event-details-content {
+  padding: 100px;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+
+.registration-success-popup .close {
+  top: 10px;
+  right: 10px;
+}
+
+.donation-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button-inside {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #cc8dc1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donation-description-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donation-description-popup-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  overflow-x: auto;
+  max-height: 300px;
+  writing-mode: horizontal-tb;
+}
+
+.image-popup-content {
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-popup-content img {
+  width: auto; /* Adjust image width */
+  height: 500px; /* Adjust image height */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.OrphDash-heading{
+    text-align: center;
+    font-size: 25px;
+    color: #050505; /* Match the border color */
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+}
+

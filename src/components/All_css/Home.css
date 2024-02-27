@@ -1,0 +1,92 @@
+/* Header.css */
+
+.home-background {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
+}
+
+.logoHF {
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  width: 75px;
+  height: auto;
+  z-index: 1;
+}
+
+
+.home-container {
+  /* background-image: url("https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: 5em;
+  position: relative; /* Added */
+  background-position: center;
+  height: calc(100vh - 64px); /* Adjust the height based on the header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
+  box-sizing: border-box; /* Ensures padding is included in height */
+}
+
+.home-container video {
+  position: absolute; 
+  margin-top: 0%; /* Added */
+  left: 10; /* Added */
+  width: 100%; /* Added */
+  height: 100%; /* Added */
+  object-fit: fill; /* Added */
+  z-index: 0;
+
+}
+
+.home-container h1 {
+  font-size: 61%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 4px;
+  left: 68px;
+  font-family: 'Anton', sans-serif;
+  stroke: rgb(16, 16, 4);
+  filter: drop-shadow();
+  color: #f0de80;
+}
+
+.subhead {
+  font-size: 90%;
+  margin-bottom: 25px;
+  background-size: cover;
+  z-index: 1;
+  font-family: 'Anton', sans-serif;
+  color: rgb(36, 43, 175);
+}
+
+.home-container p {
+  font-size: 2.5rem;
+  max-width: 600px;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 2px;
+  z-index: 1;
+  padding-top: 1%;
+  color: rgb(56, 194, 199);
+}
+
+.donate {
+  position: absolute; /* Changed */
+  bottom: 15%; /* Adjusted */
+  right: 42%; /* Adjusted */
+  background-color: #7d7aab;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
