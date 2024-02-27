@@ -78,7 +78,7 @@
   
   .carousel img {
     width: 100%;
-    height: auto;
+    height: 400px;
   }
   
   .carousel_buttons {
@@ -94,7 +94,7 @@
     gap: 2vh;
   }
   .carousel_button{
-    background-color: #e3e0dd; /* Set button background color as needed */
+    background-color: e9cce4; /* Set button background color as needed */
     color: #3c3a3a; /* Set button text color as needed */
     cursor: pointer;
     padding: 3vh 4vh;

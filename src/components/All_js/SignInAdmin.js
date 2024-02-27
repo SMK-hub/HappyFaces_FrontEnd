@@ -26,6 +26,7 @@ const SignInAdmin = () => {
     otp: '',
   });
   const [passwordsMatchError, setPasswordsMatchError] = useState(false);
+  const [otpMatchError, setOtpMatchError] = useState(false);
   const { setUserData } = useUser();
 
   const fetchData = async () => {
@@ -97,14 +98,19 @@ const SignInAdmin = () => {
 
   const handleNewPasswordSubmit = (e) => {
     e.preventDefault();
-    if (newPasswordData.password === newPasswordData.confirmPassword) {
+    if(enteredOtp === forgotPasswordData.otp){
+      if (newPasswordData.password === newPasswordData.confirmPassword) {
       // Add logic to submit new password
       setShowForgotPasswordPopup(false);
       setShowNewPasswordPopup(false);
       setPasswordsMatchError(false);
-    } else {
-      setPasswordsMatchError(true);
-    }
+      } else {
+        setPasswordsMatchError(true);
+      }
+      }
+      else{
+        setOtpMatchError(true);
+      }
   };
 
   const handleBack = () => {
@@ -185,7 +191,7 @@ const SignInAdmin = () => {
 
       {/* OTP Verification Popup */}
       {showOtpVerificationPopup && (
-        <div className="popup">
+        <div className="popup" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
           <div className="popup-inner">
             {/* <button className="close-btn" onClick={handleBack}>X</button> */}
             <h2>OTP Verification</h2>
@@ -215,6 +221,8 @@ const SignInAdmin = () => {
                 placeholder="Confirm new password"
               />
               {passwordsMatchError && <p>Passwords do not match</p>}
+              {otpMatchError && <p>OTP do not match</p>}
+
               <div className="form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
                 <button type="submit" onClick={() => changePassword()}>Submit</button>
                 <button onClick={handleBack}>Back</button>

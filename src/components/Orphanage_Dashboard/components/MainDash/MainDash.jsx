@@ -6,7 +6,7 @@ const MainDash = () => {
   return (
     
     <div className="MainDashboard">
-      <h1 style={{ fontFamily: 'Anton, sans-serif', fontSize: '2em' }}>Dashboard</h1>
+      <h1 style={{ fontFamily: 'Anton, sans-serif', fontSize: '2em' , display:'flex',alignItems:'center',justifyContent:'center' }}>Orphanage Dashboard</h1>
       <Cards />
       <Table />
     </div>

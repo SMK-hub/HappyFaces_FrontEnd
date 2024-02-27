@@ -72,4 +72,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # HappyFaces_FrontEnd
 >>>>>>> 98a54ed25322aa16a19e589bd858ccb440562011
-# HappyFaces_Frontend

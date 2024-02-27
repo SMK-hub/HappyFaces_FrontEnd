@@ -39,10 +39,14 @@
     left: 362px;
 }
   
-  .form-label {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+.form-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  /* Add the following styles to align the labels properly */
+  text-align: left;
+  width: 100%;
+  padding-left: 15px; /* Adjust as needed */
+}
   
   .form-input {
     width: 100%;

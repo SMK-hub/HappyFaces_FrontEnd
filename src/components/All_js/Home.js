@@ -36,7 +36,6 @@ const Home = () => {
       <NumberCounter/>
       <CardList/>
       <Testimony/>
-      <div><Contact/></div>
       
       <Footer/>
     </div>

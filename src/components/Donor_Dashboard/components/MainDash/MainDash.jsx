@@ -8,26 +8,39 @@ import { useUser } from '../../../../UserContext';
 
  
 const MainDash = () => {
-  // Define initial data for each card with different messages
-  const initialData = [
-    { title: "Total Contributions", value: 100, message: "Thank you for your generous contributions!" },
-    { title: "Events Attended", value: 20, message: "Great job attending our events! Keep it up!" },
-    { title: "Total Payment Donated", value: 5000, message: "Your donations are making a big impact. Thank you!" }
-    // Add more cards as needed
-  ];
- 
+  
   const{userDetails} = useUser();
   const [transactions,setTransaction] = useState();
   const [selectedCard, setSelectedCard] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [totalTransactionAmount,setTotalTransactionAmount] = useState(0);
+  const [noOfRequirement,setNoOfRequirement] = useState(0);
+  const [noOfEvents, setNoOfEvents] = useState(0);
+  // Define initial data for each card with different messages
+  const initialData = [
+    { title: "Total Contributions", value: noOfRequirement, message: "Thank you for your generous contributions!" },
+    { title: "Events Registered", value: noOfEvents, message: "Great job attending our events! Keep it up!" },
+    { title: "Total Payment Donated", value: "Rs."+totalTransactionAmount, message: "Your donations are making a big impact. Thank you!" }
+    // Add more cards as needed
+  ];
+ 
+  
  
   useEffect(() => {
     const getTransactionData = async()=>{
       try{
         const response = await axios.get(`${API_BASE_URL}/donor/DonationList/${userDetails.donorId}`);
-        console.log(response.data);
         setTransaction(response.data.sort((a, b) => new Date(a.datetime) - new Date(b.datetime)).slice(0,5));
+        const totalAmount = response.data.reduce((total, transaction) => total + parseFloat(transaction.amount),0);
+        setTotalTransactionAmount(totalAmount.toString());
+        const responseReq = await axios.get(`${API_BASE_URL}/donor/${userDetails.donorId}/DonationRequirement`);
+        let requirementCount = responseReq.data.length;
+        setNoOfRequirement(requirementCount);
+        const responseEve = await axios.get(`${API_BASE_URL}/donor/RegisteredEvents/${userDetails.donorId}`);
+        let eventCount = responseEve.data.length;
+        setNoOfEvents(eventCount);
+        
       }catch(error){
         console.log(error);
       }

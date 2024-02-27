@@ -74,7 +74,7 @@ const AboutUs = () => {
             <p>
               "Embark on a transformative journey with us. Join Happy Faces in making a profound impact. Your involvement, whether through donations, volunteering, or advocacy, plays a pivotal role in creating positive change and nurturing brighter futures for orphaned children. Together, let's make a lasting difference."
             </p>
-            <button className="join-us-button">Join Us</button>
+            <a href="/signup" className="join-us-button">Join Us</a>
           </div>
         </div>
 

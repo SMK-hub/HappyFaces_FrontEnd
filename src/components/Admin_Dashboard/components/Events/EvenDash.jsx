@@ -184,26 +184,32 @@ const EvenDash = () => {
             </tr>
           </thead>
           <tbody>
-            {currentEntries.map((event, index) => (
-              <tr key={index}>
-                <td>{event.name}</td>
-                <td>{event.desc}</td>
-                <td>{event.date}</td>
-                <td>{event.time}</td>
-                <td>
-                  <button onClick={() => openModal(event)} className="smallButton">Details</button>
-                </td>
-                <td>{event.status}</td>
-                <td className="requests">
-                  {event.status === "VERIFIED" && (
-                    <button onClick={() => showConfirmation("Decline", event.id)} style={{ fontSize: "10px", padding: "5px" }}>Decline</button>
-                  )}
-                  {event.status === "NOT_VERIFIED" && (
-                    <button onClick={() => showConfirmation("Accept", event.id)} style={{ fontSize: "10px",padding:"5px"}}>Accept</button>
-                  )}
-                </td>
-              </tr>
-            ))}
+          {currentEntries.length === 0 ? (
+    <tr>
+      <td colSpan="7" style={{ textAlign: "center" }}>No events have been created yet.</td>
+    </tr>
+  ) : (
+    currentEntries?.map((event, index) => (
+      <tr key={index}>
+        <td>{event?.name}</td>
+        <td>{event?.desc}</td>
+        <td>{event?.date}</td>
+        <td>{event?.time}</td>
+        <td>
+          <button onClick={() => openModal(event)} className="smallButton">Details</button>
+        </td>
+        <td>{event?.status}</td>
+        <td className="requests">
+          {event?.status === "VERIFIED" && (
+            <button onClick={() => showConfirmation("Decline", event.id)} style={{ fontSize: "10px", padding: "5px" }}>Decline</button>
+          )}
+          {event?.status === "NOT_VERIFIED" && (
+            <button onClick={() => showConfirmation("Accept", event.id)} style={{ fontSize: "10px",padding:"5px"}}>Accept</button>
+          )}
+        </td>
+      </tr>
+    ))
+  )}
           </tbody>
         </table>
 
@@ -222,11 +228,11 @@ const EvenDash = () => {
               <span className="close" onClick={closeModal} style={{ position: 'absolute', top: '10px', right: '10px', cursor: 'pointer' }}>
                 &times;
               </span>
-              <h3>{selectedEvent.name}</h3>
-              <p className="field-name" style={{ margin: '10px 0' }}>Description:<span> {selectedEvent.desc}</span></p>
-              <p className="field-name" style={{ margin: '10px 0' }}>Date:<span> {selectedEvent.date}</span></p>
-              <p className="field-name" style={{ margin: '10px 0' }}>Time:<span> {selectedEvent.time}</span></p>
-              <p className="field-name" style={{ margin: '10px 0' }}>Current Status:<span> {selectedEvent.state}</span></p>
+              <h3>{selectedEvent?.name}</h3>
+              <p className="field-name" style={{ margin: '10px 0' }}>Description:<span> {selectedEvent?.desc}</span></p>
+              <p className="field-name" style={{ margin: '10px 0' }}>Date:<span> {selectedEvent?.date}</span></p>
+              <p className="field-name" style={{ margin: '10px 0' }}>Time:<span> {selectedEvent?.time}</span></p>
+              <p className="field-name" style={{ margin: '10px 0' }}>Current Status:<span> {selectedEvent?.state}</span></p>
               <p className="field-name" style={{ margin: '10px 0' }}>Interested People:
                 <Button 
                   type="primary" 

@@ -55,7 +55,7 @@ const EventTable = () => {
       } catch (error) {
         message.error(error);
       }
-      finally{
+      finally {
         setLoading(false);
       }
     }
@@ -176,40 +176,45 @@ const EventTable = () => {
     <div className='main-events'>
       <h1 style={{ fontFamily: 'Anton, sans-serif', fontSize: '2em', justifyContent: 'center', justifyItems: 'center' }}>EVENTS</h1>
       <div className="eventContainer">
-        <table className="event-table">
-          <thead>
-            <tr>
-              <th>Event Name</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Description</th>
-              <th>Verification Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentEvents?.map((event, index) => (
-              <tr key={index}>
-                <td>{event?.title}</td>
-                <td>{event?.date}</td>
-                <td>{event?.time}</td>
-                <td>{event?.description}</td>
-                <td>{event?.verificationStatus}</td>
-                <td>
-                  <Tooltip title="Edit Event">
-                    <EditIcon className="edit-icon" onClick={() => handleEditEvent(event)} />
-                  </Tooltip>
-                  <Tooltip title="View Event">
-                    <VisibilityIcon className="view-icon" onClick={() => handleViewEvent(event)} />
-                  </Tooltip>
-                  <Tooltip title="Cancel Event">
-                    <ClearIcon className="cancel-icon" onClick={() => handleCancelEvent(event.id)} />
-                  </Tooltip>
-                </td>
+        {events && events.length > 0 ? (
+          <table className="event-table">
+            <thead>
+              <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Description</th>
+                <th>Verification Status</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {currentEvents?.map((event, index) => (
+                <tr key={index}>
+                  <td>{event?.title}</td>
+                  <td>{event?.date}</td>
+                  <td>{event?.time}</td>
+                  <td>{event?.description}</td>
+                  <td>{event?.verificationStatus}</td>
+                  <td>
+                    <Tooltip title="Edit Event">
+                      <EditIcon className="edit-icon" onClick={() => handleEditEvent(event)} />
+                    </Tooltip>
+                    <Tooltip title="View Event">
+                      <VisibilityIcon className="view-icon" onClick={() => handleViewEvent(event)} />
+                    </Tooltip>
+                    <Tooltip title="Cancel Event">
+                      <ClearIcon className="cancel-icon" onClick={() => handleCancelEvent(event.id)} />
+                    </Tooltip>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+        <p><center>No Events Created</center></p>
+        )}
+
         <div className="button-container">
           <button className="new-event-button" onClick={handleCreateNewEvent}>
             Create New Event
@@ -245,32 +250,32 @@ const EventTable = () => {
             <p>Time: {selectedEvent?.time}</p>
             <p>Description: {selectedEvent?.description}</p>
             <h4>Interested Persons:</h4>
-            <ul style={{ 
-                overflowY: 'scroll', 
-                maxHeight: '200px',
-                listStyleType: 'none',
-                padding: '10px',
-                border: '1px solid #ccc',
-                borderRadius: '5px',
-                boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+            <ul style={{
+              overflowY: 'scroll',
+              maxHeight: '200px',
+              listStyleType: 'none',
+              padding: '10px',
+              border: '1px solid #ccc',
+              borderRadius: '5px',
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
             }}>
               {interestedPersons?.length > 0 ? (
-            interestedPersons.map((person, index) => (
-            <li 
-            key={index}
-            style={{
-            marginBottom: '10px',
-            padding: '5px',
-            background: '#f9f9f9',
-            borderRadius: '3px',
-            }}
-            >
-            <strong>Name:</strong> {person.name}, <strong>Email:</strong> {person.email}, <strong>Contact Number:</strong> {person.contactNumber}
-            </li>
-            ))
-            ) : (
-            <li style={{ textAlign: 'center' }}>No people have registered their interest yet!</li>
-            )}
+                interestedPersons.map((person, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      marginBottom: '10px',
+                      padding: '5px',
+                      background: '#f9f9f9',
+                      borderRadius: '3px',
+                    }}
+                  >
+                    <strong>Name:</strong> {person.name}, <strong>Email:</strong> {person.email}, <strong>Contact Number:</strong> {person.contactNumber}
+                  </li>
+                ))
+              ) : (
+                <li style={{ textAlign: 'center' }}>No people have registered their interest yet!</li>
+              )}
             </ul>
           </DialogContent>
           <DialogActions>

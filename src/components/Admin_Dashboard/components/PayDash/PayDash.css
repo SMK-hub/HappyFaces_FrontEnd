@@ -18,6 +18,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    
   }
   
   th, td {
@@ -48,9 +49,9 @@
   }
   
   .pagination-button {
-    background-color: #f0f0f0;
+    background-color: #131212;
     border: 1px solid #ddd;
-    color: #333;
+    color: #db9fd3;
     cursor: pointer;
     font-size: 10px;
     margin: 0 3px;
@@ -64,7 +65,7 @@
   }
   
   .pagination-button.active {
-    background-color: black;
+    background-color: rgb(221, 134, 224);
     color: white;
   }
   

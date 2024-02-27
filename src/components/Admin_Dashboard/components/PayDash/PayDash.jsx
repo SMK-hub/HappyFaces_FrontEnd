@@ -131,53 +131,62 @@ if (error) {
   return (
     <div>
       <div className="OrphDash">
-        <h2>Payments</h2>
+  <h2>Payments</h2>
+  {/* Payment Table */}
+  <div className="donations-table-container" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+    <table>
+      {/* Table headers */}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Transaction Id</th>
+          <th>Date</th>
+          <th>Orphanage</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      {/* Table body */}
+      <tbody>
+        {paymentData?.map((data, index) => (
+          <tr key={index}>
+            {/* Table cells */}
+            <td>{data?.donorName}</td>
+            <td>Rs.{data?.amount}</td>
+            <td>{data?.transactionId}</td>
+            <td>{data?.dateTime}</td>
+            <td>{data?.orphanageName}</td>
+            <td>{data?.status}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
 
-        {/* Table */}
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Amount</th>
-              <th>Transaction Id</th>
-              <th>Date</th>
-              <th>Orphanage</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-              {paymentData?.map((data, index) => (
-                <tr key={index}>
-                  <td>{data?.donorName}</td>
-                  <td>Rs.{data?.amount}</td>
-                  <td>{data?.transactionId}</td>
-                  <td>{data?.dateTime}</td>
-                  <td>{data?.orphanageName}</td>
-                  <td>{data?.status}</td>
+{/* Donations Table */}
+<div className="donations-table-container" style={{ width: '850px' }}>
+          <h2 style={{ textAlign: 'center' }}>Donations</h2>
+          <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+            <table>
+              <thead>
+                <tr>
+                  <th>Donor Name</th>
+                  <th>Orphanage Name</th>
+                  <th>Description</th>
                 </tr>
-              ))}
-          </tbody>
-        </table>
-
-        <h2>Donations</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Donor Name</th>
-              <th>Orphanage Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {requireData?.map((data, index) =>
-                <tr key={index}>
-                  <td>{data?.donorName}</td>
-                  <td>{data?.orphanageName}</td>
-                  <td>{data?.description}</td>
-                </tr>
-            )}
-          </tbody>
-        </table>
+              </thead>
+              <tbody>
+                {requireData.map((data, index) => (
+                  <tr key={index}>
+                    <td>{data.donorName}</td>
+                    <td>{data.orphanageName}</td>
+                    <td>{data.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );

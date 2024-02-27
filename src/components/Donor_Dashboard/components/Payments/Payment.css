@@ -19,7 +19,11 @@
 }
  
 .payment-table-container {
-  max-height: 400px; /* Set maximum height for the table container */
+  max-height: 250px; /* Set maximum height for the table container */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+.donation-table-container {
+  max-height: 250px; /* Set maximum height for the table container */
   overflow-y: auto; /* Enable vertical scrollbar */
 }
  

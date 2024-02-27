@@ -10,6 +10,12 @@ import prayImage from "../../Images/image0_0_Pray.jpg";
 import studyImage from "../../Images/image0_0_Study.jpg";
 import sleepImage from "../../Images/sleepChild.jpeg";
 import eatImage from "../../Images/eatChild.jpeg";
+import M4 from "../../Images/M4.jpg";
+import M5 from "../../Images/M5.jpg";
+import M6 from "../../Images/M6.jpg";
+import M7 from "../../Images/M7.jpg";
+import M8 from "../../Images/M8.jpg";
+import M10 from "../../Images/M10.jpg";
 import Footer from './Footer';
 // import { Header } from 'tar';
 
@@ -24,11 +30,12 @@ const Gallery = () => {
   ];
 
    const slideImages = [
-    { id: 1, src: playImage},
-      { id: 2, src: prayImage},
-      { id: 3, src: studyImage},
-      { id: 4, src:sleepImage},
-      {id:5, src:eatImage},
+    { id: 1, src: M4},
+      { id: 2, src: M5},
+      { id: 3, src: M6},
+      { id: 4, src:M7},
+      {id:5, src:M8},
+      {ID:6, src:M10},
    ];
 
   const reactSwipeEl = useRef(null);

@@ -10,6 +10,8 @@
   padding: 20px;
   border: 3px solid #bd89b6; /* Make the border more bold */
   border-radius: 30px; /* Add curvature to the border */
+  max-height: 250px; /* Set maximum height for the table container */
+  overflow-y: auto; /* Enable vertical scrollbar */
 }
 
 .event-table {

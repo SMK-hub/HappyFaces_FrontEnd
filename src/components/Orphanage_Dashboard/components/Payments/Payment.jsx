@@ -111,7 +111,7 @@ if (error) {
     ))}
     {!paymentData?.length && (
 <tr>
-<td colSpan="5">No payment data</td>
+<td colSpan="5"><center>No payment data</center></td>
 </tr>
     )}
 </tbody>

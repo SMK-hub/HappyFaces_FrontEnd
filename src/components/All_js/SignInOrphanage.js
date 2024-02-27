@@ -26,6 +26,7 @@ const SignInOrphanage = () => {
     otp: '',
   });
   const [passwordsMatchError, setPasswordsMatchError] = useState(false);
+  const [otpMatchError, setOtpMatchError] = useState(false);
   const [showOtpField, setShowOtpField] = useState(false); // State to control the display of OTP field
   const { setUserData } = useUser();
  
@@ -99,12 +100,18 @@ const SignInOrphanage = () => {
  
   const handleNewPasswordSubmit = (e) => {
     e.preventDefault();
-    if (newPasswordData.password === newPasswordData.confirmPassword) {
+    if(enteredOtp === forgotPasswordData.otp){
+      if (newPasswordData.password === newPasswordData.confirmPassword) {
       // Add logic to submit new password
+      setShowForgotPasswordPopup(false);
       setShowNewPasswordPopup(false);
       setPasswordsMatchError(false);
-    } else {
-      setPasswordsMatchError(true);
+      } else {
+        setPasswordsMatchError(true);
+      }
+    }
+    else{
+      setOtpMatchError(true);
     }
   };
  
@@ -222,6 +229,8 @@ const SignInOrphanage = () => {
                 placeholder="Confirm new password"
               />
               {passwordsMatchError && <p>Passwords do not match</p>}
+              {otpMatchError && <p>OTP do not match</p>}
+
               <div className="orphanage-form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
                 <button type="submit" onClick={()=>changePassword()}>Submit</button>
                 <button onClick={handleBack}>Back</button>

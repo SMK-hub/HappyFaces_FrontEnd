@@ -26,6 +26,7 @@ const SignInDonor = () => {
     otp: '',
   });
   const [passwordsMatchError, setPasswordsMatchError] = useState(false);
+  const [otpMatchError, setOtpMatchError] = useState(false);
   const { setUserData } = useUser();
 
   const fetchData = async () => {
@@ -97,14 +98,20 @@ const SignInDonor = () => {
 
   const handleNewPasswordSubmit = (e) => {
     e.preventDefault();
-    if (newPasswordData.password === newPasswordData.confirmPassword) {
+    if(enteredOtp === forgotPasswordData.otp){
+      if (newPasswordData.password === newPasswordData.confirmPassword) {
       // Add logic to submit new password
       setShowForgotPasswordPopup(false);
       setShowNewPasswordPopup(false);
       setPasswordsMatchError(false);
-    } else {
-      setPasswordsMatchError(true);
-    }
+      } else {
+        setPasswordsMatchError(true);
+      }
+  }
+  else{
+    setOtpMatchError(true);
+  }
+    
   };
 
   const handleBack = () => {
@@ -217,6 +224,8 @@ const SignInDonor = () => {
                 placeholder="Confirm new password"
               />
               {passwordsMatchError && <p>Passwords do not match</p>}
+              {otpMatchError && <p>OTP do not match</p>}
+
               <div className="donor-form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
                 <button type="submit" onClick={() => changePassword()}>Submit</button>
                 <button onClick={handleBack}>Back</button>
