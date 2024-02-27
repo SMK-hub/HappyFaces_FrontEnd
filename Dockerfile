@@ -1,16 +1,23 @@
-FROM node:20.10.0-buster AS build
-WORKDIR /build
+# Use an official Node runtime as the base image
+FROM node:14-alpine
 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
-RUN npm ci
+# Set the working directory in the container
+WORKDIR /app
 
-COPY public/ public
-COPY src/ src
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the entire application code to the working directory
+COPY . .
+
+# Build the React app
 RUN npm run build
 
-FROM httpd:alpine
-WORKDIR /usr/local/apache2/htdocs
-COPY --from=build /build/build/ .
-RUN chown -R www-data:www-data /usr/local/apache2/htdocs \
-    && sed -i "s/Listen 80/Listen \${PORT}/g" /usr/local/apache2/conf/httpd.conf
+# Expose port 3000 to the outside world (or any other port you want to use)
+EXPOSE 3000
+
+# Start the Node.js server when the container launches
+CMD ["npm", "start"]
