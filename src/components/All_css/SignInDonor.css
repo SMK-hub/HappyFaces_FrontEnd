@@ -7,6 +7,7 @@
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
+  background-image:linear-gradient( 106.37deg, #ffe1bc 29.63%,  #FF0076 51.55%, #590FB7 90.85% );
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   margin: 5vh auto;
@@ -111,7 +112,7 @@
 }
 
 .donor-forgot-password-link:hover {
-  color: #ffe1bc;
+  color: #4c2d07;
 }
 
 .donor-forgot-password-popup {

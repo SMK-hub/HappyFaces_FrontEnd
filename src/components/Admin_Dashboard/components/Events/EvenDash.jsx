@@ -68,7 +68,7 @@ const EvenDash = () => {
 
   const updateEventStatus = async (eventId, status) => {
     try {
-      await axios.post(`http://localhost:8079/admin/verifyEventDetails/${eventId}/${status}`);
+      await axios.post(`${API_BASE_URL}/admin/verifyEventDetails/${eventId}/${status}`);
       fetchEvents();
       console.log("Event status updated ");
     } catch(error) {

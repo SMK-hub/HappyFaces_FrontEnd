@@ -33,7 +33,7 @@ const AboutUs = () => {
           <div className="AboutUscard" id="mission-AboutUscard">
             <h3>Our Mission</h3>
             <p>
-              Happy Faces: Illuminating lives with love, Happy Faces is on a mission to provide hope, shelter, and opportunities to orphaned children, fostering resilience and joyful futures. #HappyFacesMission
+              Illuminating lives with love, Happy Faces is on a mission to provide hope, shelter, and opportunities to orphaned children, fostering resilience and joyful futures. #HappyFacesMission
             </p>
           </div>
           <div className="AboutUscard" id="values-AboutUscard">
@@ -45,7 +45,7 @@ const AboutUs = () => {
           <div className="AboutUscard" id="team-AboutUscard">
             <h3>Our Team</h3>
             <p>
-              Meet the incredible team behind Happy Faces—passionate individuals dedicated to nurturing smiles and building a brighter future for orphaned children. Committed to compassion, innovation, and positive impact. Together, we make dreams blossom! #HappyFacesTeam
+              Meet the incredible team Selva Muthu Kannan,Amisha Raj,Srikanth and Manonmai behind Happy Faces—passionate individuals dedicated to nurturing smiles and building a brighter future for orphaned children. Committed to compassion, innovation, and positive impact. Together, we make dreams blossom! #HappyFacesTeam
             </p>
             {/* <button className="view-details-button" onClick={handleViewTeamMembers}>
               View Team Members

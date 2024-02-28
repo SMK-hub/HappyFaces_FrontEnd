@@ -63,7 +63,7 @@
   background-size: cover;
   z-index: 1;
   font-family: 'Anton', sans-serif;
-  color: rgb(36, 43, 175);
+  color: rgb(211 178 202);
 }
 
 .home-container p {
@@ -81,7 +81,7 @@
   position: absolute; /* Changed */
   bottom: 15%; /* Adjusted */
   right: 42%; /* Adjusted */
-  background-color: #7d7aab;
+  background-color: #c59bbe;
   color: white;
   font-size: 1.2rem;
   padding: 10px 20px;

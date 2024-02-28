@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.sign-in-admin-container {
+.admin-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@
   margin: 5vh auto;
 }
 
-.sign-in-admin-heading {
+.admin-heading {
   font-size: 28px;
   margin-bottom: 20px;
   margin-top: 76px;
@@ -28,10 +28,10 @@
   align-content: center;
 }
 
-.sign-in-admin-form {
+.admin-form {
   display: flex;
   flex-direction: column;
-  width: 37%;
+  width: 35%;
   position: relative;
   align-content: center;
   justify-content: center;
@@ -52,7 +52,7 @@
   font-size: 16px;
 }
 
-.in-button {
+.admin-form-button {
   width: 23%;
   padding: 15px;
   cursor: pointer;
@@ -63,10 +63,6 @@
   border-radius: 8px;
   font-size: 18px;
   transition: background-color 0.3s ease;
-}
-
-.admin-form-button:hover {
-  background-image: linear-gradient(106.37deg, #f3c6f1 29.63%, #ffcfd1 51.55%, #ffe1bc 90.85%);
 }
 
 .admin-back-link {
@@ -112,14 +108,14 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.popup-inner {
+.admin-popup-inner {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   width: 350px;
 }
 
-.forgot-password-popup {
+.admin-forgot-password-popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -150,13 +146,13 @@
   margin-bottom: 10px;
 }
 
-.admin-forgot-password-popup .form-buttons {
+.admin-forgot-password-popup .admin-form-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-.admin-forgot-password-popup .form-buttons button {
+.admin-forgot-password-popup .admin-form-buttons button {
   padding: 8px 20px;
   cursor: pointer;
   border: none;
@@ -165,6 +161,6 @@
   color: white;
 }
 
-.admin-forgot-password-popup .form-buttons button:hover {
+.admin-forgot-password-popup .admin-form-buttons button:hover {
   background-color: #cfb7cf;
 }

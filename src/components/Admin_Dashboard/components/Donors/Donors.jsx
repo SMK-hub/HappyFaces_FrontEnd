@@ -6,6 +6,7 @@ import "./Donors.css";
 import '@fortawesome/fontawesome-free/css/all.css';
 // import ImagePopup from "./ImagePopup";
 import axios from "axios";
+import { API_BASE_URL } from "../../../../config";
 
 const Donors = () => {
   const [imagePopupVisible, setImagePopupVisible] = useState(false);
@@ -27,7 +28,7 @@ const Donors = () => {
 
   const fetchDonations = async () => {
     try {
-      const response = await axios.get("http://localhost:8079/admin/donorList");
+      const response = await axios.get(`${API_BASE_URL}/admin/donorList`);
       const data = response.data.map(donor => ({
         name: donor.name,
         contact: donor.contact,

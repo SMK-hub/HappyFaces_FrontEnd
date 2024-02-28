@@ -11,6 +11,7 @@ import { LoadingButton } from "@mui/lab";
 import { jsPDF } from "jspdf";
 import axios from "axios";
 import {useUser} from '../../../../UserContext'
+import { API_BASE_URL } from "../../../../config";
 
 
 
@@ -42,7 +43,7 @@ const{userDetails}= useUser();
 
   const fetchOrphanages = async () => {
     try {
-      const response = await axios.get("http://localhost:8079/admin/orphanageDetailsList");
+      const response = await axios.get(`${API_BASE_URL}/admin/orphanageDetailsList`);
       const data = response.data.map(orphanage => ({
         ...orphanage,
         name: orphanage.orphanageName,
@@ -63,7 +64,7 @@ const{userDetails}= useUser();
 
   const fetchImageData = async (orpId)=> {
     try{
-      const response=await axios.get(`http://localhost:8079/orphanage/${orpId}/orphanageDetails/viewImages`);
+      const response=await axios.get(`${API_BASE_URL}/orphanage/${orpId}/orphanageDetails/viewImages`);
       console.log(response.data)
       return response.data;
  
@@ -84,7 +85,7 @@ const{userDetails}= useUser();
 
   const fetchOrphanageCertificate = async (orpId) => {
     try {
-      const response = await axios.get(`http://localhost:8079/admin/getCertificate/${orpId}`, {
+      const response = await axios.get(`${API_BASE_URL}/admin/getCertificate/${orpId}`, {
         responseType: 'arraybuffer'
       });
   
@@ -111,7 +112,7 @@ const handleClosePdfDialog = () => {
 
   const updateOrphanageStatus = async (OrpId,status) => {
     try {
-      await axios.post(`http://localhost:8079/admin/verifyOrphanageDetails/${OrpId}/${status}`);
+      await axios.post(`${API_BASE_URL}/admin/verifyOrphanageDetails/${OrpId}/${status}`);
       fetchOrphanages();
       console.log("Orphanage status updated ");
     } catch(error) {

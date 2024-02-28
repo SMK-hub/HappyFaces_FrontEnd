@@ -81,7 +81,7 @@ const Gallery = () => {
   return (
     <div>
       <center>
-        <div className="image-gallery">
+        <div className="image-gallery" >
         {orphanageDetailWithImage.loading ? (
             <CircularProgress sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} />
           ) : orphanageDetailWithImage.error ? (

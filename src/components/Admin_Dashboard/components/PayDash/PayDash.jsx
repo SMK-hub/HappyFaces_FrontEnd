@@ -133,7 +133,8 @@ if (error) {
       <div className="OrphDash">
   <h2>Payments</h2>
   {/* Payment Table */}
-  <div className="donations-table-container" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+  <div className="payments-table-container">
+  <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
     <table>
       {/* Table headers */}
       <thead>
@@ -162,9 +163,10 @@ if (error) {
       </tbody>
     </table>
   </div>
+  </div>
 
 {/* Donations Table */}
-<div className="donations-table-container" style={{ width: '850px' }}>
+<div className="donations-table-container" style={{ width: '850px',}}>
           <h2 style={{ textAlign: 'center' }}>Donations</h2>
           <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
             <table>

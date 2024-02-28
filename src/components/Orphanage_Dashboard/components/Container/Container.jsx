@@ -226,7 +226,7 @@ const openPhotos=()=>{
       <Dialog
         open={gopen}
         onClose={handleClose} 
-      >
+        >
         <DialogContent>
           <Galleries />
         </DialogContent>

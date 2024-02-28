@@ -125,8 +125,8 @@ const SignInAdmin = () => {
     <div className='sign-in-admin'>
       <Header/>
       <div style={{display:'flex',flexDirection:'column', justifyContent:'center', margin:'auto 0px'}}>
-        <h2 className="sign-in-admin-heading">ADMIN SIGN IN</h2>
-        <form onSubmit={handleSignIn} className="sign-in-admin-form">
+        <h2 className="admin-heading">ADMIN SIGN IN</h2>
+        <form onSubmit={handleSignIn} className="admin-form">
           <label className="admin-form-label">
             Email:
             <input
@@ -134,31 +134,31 @@ const SignInAdmin = () => {
               value={adminDetails.email}
               onChange={(e) => setAdminDetails({ ...adminDetails, email: e.target.value })}
               required
-              className="form-input"
+              className="admin-form-input"
               placeholder="Enter your email"
             />
           </label>
-          <label className="form-label">
+          <label className="admin-form-label">
             Password:
             <input
               type="password"
               value={adminDetails.password}
               onChange={(e) => setAdminDetails({ ...adminDetails, password: e.target.value })}
               required
-              className="form-input"
+              className="admin-form-input"
               placeholder="Enter your password"
             />
           </label>
 
-          <div className="form-buttons">
-            <button type="submit" className="form-button">
+          <div className="admin-form-buttons">
+            <button type="submit" className="admin-form-button">
               Sign In
             </button>
             {/* Changed "Forgot Password" button to text */}
-            <a href="#" onClick={handleForgotPassword} className="donor-forgot-password-link">
+            <a href="#" onClick={handleForgotPassword} className="admin-forgot-link">
               Forgot Password?
             </a>
-            <Link to="/signin" className="back-link">
+            <Link to="/signin" className="admin-back-link">
           Back
         </Link>
           </div>
@@ -169,7 +169,7 @@ const SignInAdmin = () => {
 
       {/* Forgot Password Popup */}
       {showForgotPasswordPopup && (
-        <div className="forgot-password-popup">
+        <div className="admin-forgot-password-popup">
           {/* <button className="close-btn" onClick={handleBack}>X</button> */}
           <h2>Forgot Password</h2>
           <form onSubmit={handleOtpSubmit}>
@@ -181,7 +181,7 @@ const SignInAdmin = () => {
               required
               placeholder="Enter your email"
             />
-            <div className="form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
+            <div className="admin-form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
               <button type="submit" onClick={() => fetchOtp()}>Send OTP</button>
               <button onClick={handleBack}>Back</button>
             </div>
@@ -191,8 +191,8 @@ const SignInAdmin = () => {
 
       {/* OTP Verification Popup */}
       {showOtpVerificationPopup && (
-        <div className="popup" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <div className="popup-inner">
+        <div className="admin-popup" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <div className="admin-popup-inner">
             {/* <button className="close-btn" onClick={handleBack}>X</button> */}
             <h2>OTP Verification</h2>
             <form onSubmit={handleNewPasswordSubmit}>
@@ -223,7 +223,7 @@ const SignInAdmin = () => {
               {passwordsMatchError && <p>Passwords do not match</p>}
               {otpMatchError && <p>OTP do not match</p>}
 
-              <div className="form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
+              <div className="admin-form-buttons" style={{ display: 'flex', flexDirection: 'row' }}>
                 <button type="submit" onClick={() => changePassword()}>Submit</button>
                 <button onClick={handleBack}>Back</button>
               </div>
