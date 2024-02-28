@@ -1,44 +1,29 @@
 pipeline {
-  agent any
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
-  environment {
-    HEROKU_API_KEY = credentials('heroku-api-key')
-    IMAGE_NAME = 'darinpope/happy-faces-react'
-    IMAGE_TAG = 'latest'
-    APP_NAME = 'happy-faces-react'
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
-      }
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/SMK-hub/HappyFaces_Frontend.git']])
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    sh 'docker build -t frontend .'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    sh 'docker-compose -f docker-compose-frontend.yml up -d'
+                }
+            }
+        }
     }
-    stage('Login') {
-      steps {
-        sh 'echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com'
-      }
-    }
-    stage('Push to Heroku registry') {
-      steps {
-        sh '''
-          docker tag $IMAGE_NAME:$IMAGE_TAG registry.heroku.com/$APP_NAME/web
-          docker push registry.heroku.com/$APP_NAME/web
-        '''
-      }
-    }
-    stage('Release the image') {
-      steps {
-        sh '''
-          heroku container:release web --app=$APP_NAME
-        '''
-      }
-    }
-  }
-  post {
-    always {
-      sh 'docker logout'
-    }
-  }
 }
