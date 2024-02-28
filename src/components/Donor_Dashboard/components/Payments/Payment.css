@@ -1,61 +1,59 @@
 /* Payment.css */
-.payment-dashboard {
+.donor-payment-dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
  
-.dashboard-container {
+.donor-dashboard-container {
   display: flex;
   flex: 1;
   width: 90%; /* Increase width */
   max-width: 1000px; /* Optionally set a maximum width */
 }
  
-.main-content {
+.donor-main-content {
   flex: 1;
-  padding: 20px;
 }
  
-.payment-table-container {
+.donor-payment-table-container {
   max-height: 250px; /* Set maximum height for the table container */
   overflow-y: auto; /* Enable vertical scrollbar */
 }
-.donation-table-container {
+.donor-donation-table-container {
   max-height: 250px; /* Set maximum height for the table container */
   overflow-y: auto; /* Enable vertical scrollbar */
 }
  
-.payment-table {
+.donor-payment-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
  
-.payment-table th,
-.payment-table td {
+.donor-payment-table th,
+.donor-payment-table td {
   border: 1px solid #111010;
-  padding: 10px;
+  padding: 5px;
   text-align: left;
 }
  
-.payment-table th {
+.donor-payment-table th {
   background-color: #c99fb2;
 }
  
-.total-amount {
-  margin-top: 20px;
+.donor-total-amount {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
  
-.total-amount p {
+.donor-total-amount p {
   margin-right: 10px;
 }
  
-.total-amount span {
+.donor-total-amount span {
   font-weight: bold;
   font-size: 1.2em;
 }

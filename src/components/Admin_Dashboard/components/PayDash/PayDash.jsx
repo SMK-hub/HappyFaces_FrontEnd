@@ -134,7 +134,7 @@ if (error) {
   <h2>Payments</h2>
   {/* Payment Table */}
   <div className="payments-table-container">
-  <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+  <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
     <table>
       {/* Table headers */}
       <thead>
@@ -168,7 +168,7 @@ if (error) {
 {/* Donations Table */}
 <div className="donations-table-container" style={{ width: '850px',}}>
           <h2 style={{ textAlign: 'center' }}>Donations</h2>
-          <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+          <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
             <table>
               <thead>
                 <tr>

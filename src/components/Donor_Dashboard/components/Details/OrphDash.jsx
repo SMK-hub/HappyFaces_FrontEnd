@@ -305,6 +305,7 @@ const OrphDash = () => {
         </div>
 
         {/* Table */}
+        <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
         <table>
           <thead>
             <tr>
@@ -328,7 +329,7 @@ const OrphDash = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
 
         {/* Modal */}
         {selectedOrphanage && (
@@ -433,6 +434,7 @@ const OrphDash = () => {
               <h3>{selectedOrphanage.orphanageName} - Event Details</h3>
  
               {/* Display Events in a Table */}
+              <div style={{ maxHeight: '500px', overflowY: 'auto' }}>
               <table>
                 <thead>
                   <tr>
@@ -471,7 +473,7 @@ const OrphDash = () => {
                   ))}
                 </tbody>
               </table>
- 
+              </div>
               <p>"Unlock a world of inspiration at our upcoming event. Join us for an enriching experience. Register now to secure your spot, connect with like-minded individuals, and contribute to a meaningful cause. Don't miss out on this transformative event!"</p>
               <button className="back-button" onClick={()=>handleEventDetailsClose()}>Back</button>
             </div>

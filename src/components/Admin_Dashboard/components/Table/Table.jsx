@@ -41,7 +41,7 @@ export default function BasicTable() {
   };
 
   return (
-    <div className="OrphTable" style={{width:'120%' ,maxHeight: '300px', overflowY: 'auto'}}>
+    <div className="OrphTable" style={{width:'120%' ,maxHeight: '200px', overflowY: 'auto'}}>
       <h3><center>Recent Orphanages</center></h3>
       <table>
         <thead>

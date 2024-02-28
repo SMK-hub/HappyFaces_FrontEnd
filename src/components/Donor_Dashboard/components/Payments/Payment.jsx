@@ -78,12 +78,13 @@ const PaymentDashboard = () => {
   }
 
   return (
-    <div className="payment-dashboard">
-      <div className="dashboard-container">
-        <div className="main-content">
+    <div className="donor-payment-dashboard">
+      <div className="donor-dashboard-container" style={{display:"flex",flexDirection:"column"}}>
+        <div className="donor-main-content">
           <h1>Payment History</h1>
-          <div className="payment-table-container">
-            <table className="payment-table">
+          <div className="donor-payment-table-container">
+            <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
+            <table className="donor-payment-table" >
               <thead>
                 <tr>
                   <th>Orphanage Name</th>
@@ -113,16 +114,18 @@ const PaymentDashboard = () => {
                 )}
               </tbody>
             </table>
+            </div>
           </div>
-          <div className="total-amount">
+          <div className="donor-total-amount">
             <p>Total Amount Collected:</p>
             <span>Rs.{getTotalAmount()}</span>
           </div>
         </div>
-        <div className="main-content">
+        <div className="donor-main-content">
           <h1>Donation History</h1>
-          <div className="donation-table-container">
-            <table className="donation-table">
+          <div className="donor-donation-table-container">
+            <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
+            <table className="donor-donation-table">
               <thead>
                 <tr>
                   <th>Orphanage Name</th>
@@ -146,6 +149,7 @@ const PaymentDashboard = () => {
                 )}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>

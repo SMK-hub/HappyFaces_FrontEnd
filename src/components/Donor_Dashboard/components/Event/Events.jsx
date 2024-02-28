@@ -103,6 +103,7 @@ const EventTable = () => {
     <div className='main-event'>
       <h1 className="event-heading">Events</h1>
       <div className="event-container">
+        <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
         <table className="event-table">
           <thead>
             <tr>
@@ -135,6 +136,7 @@ const EventTable = () => {
             )}
           </tbody>
         </table>
+        </div>
       </div>
       {cancelRegistrationVisible && (
         <div className="modal">

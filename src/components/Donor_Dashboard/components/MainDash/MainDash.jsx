@@ -79,6 +79,7 @@ const MainDash = () => {
           </div>
         </div>
       )}
+      <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
       <table className="transaction-table">
         <thead>
           <tr>
@@ -99,6 +100,7 @@ const MainDash = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
