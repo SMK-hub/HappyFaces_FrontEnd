@@ -7,6 +7,8 @@ import '@fortawesome/fontawesome-free/css/all.css';
 // import ImagePopup from "./ImagePopup";
 import axios from "axios";
 import { useUser } from '../../../../UserContext';
+import { API_BASE_URL } from "../../../../config";
+
 
 const PayDash = () => {
 
