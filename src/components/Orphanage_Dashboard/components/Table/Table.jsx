@@ -50,7 +50,7 @@ export default function BasicTable() {
     <div className="Table">
       <div className="DonationDetailsTable">
         <h3>Donation Details</h3>
-        <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+        <div style={{ maxHeight: '200px', overflowY: 'auto' }}>
   <Table aria-label="last 4 transactions table">
     <TableHead>
       <TableRow sx={{ backgroundColor: 'lightpink' }}>
