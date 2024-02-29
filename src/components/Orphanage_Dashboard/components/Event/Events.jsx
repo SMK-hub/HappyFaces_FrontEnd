@@ -13,7 +13,7 @@ import EditIcon from '@mui/icons-material/ModeEdit'; // Import Edit icon
 import ClearIcon from '@mui/icons-material/Clear'; // Import Clear icon
 import VisibilityIcon from '@mui/icons-material/Visibility'; // Import Visibility icon
 import Tooltip from '@mui/material/Tooltip'; // Import Tooltip component
-
+ 
 const EventTable = () => {
   const [events, setEvents] = useState();
   const { userDetails } = useUser();
@@ -42,7 +42,7 @@ const EventTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const eventsPerPage = 3;
   const [loading, setLoading] = useState(false);
-
+ 
   const handleCancelEvent = async (eventId) => {
     if (window.confirm("Do you want to cancel this event?")) {
       setLoading(true);
@@ -60,18 +60,19 @@ const EventTable = () => {
       }
     }
   };
-
+ 
   const handleEditEvent = (event) => {
     setEdit(true);
     setSelectedEvent(event);
   };
-
+ 
   const handleViewEvent = async (event) => {
     setSelectedEvent(event);
     try {
-      const response = await axios.get(`${API_BASE_URL}/orphanage/getInterestedPersons/${event.id}`);
+      const response = await axios.get(`${API_BASE_URL}/orphanage/getInterestedPerson/${event.id}`);
       console.log(response.data);
       if (response.status === 200) {
+        console.log(response.data);
         setInterestedPersons(response.data);
         setOpen(true);
       }
@@ -81,11 +82,11 @@ const EventTable = () => {
     }
     setView(true);
   };
-
+ 
   const handleCreateNewEvent = () => {
     setOpen(true);
   };
-
+ 
   const handleClose = () => {
     setOpen(false);
     setView(false); // Reset view state
@@ -98,7 +99,7 @@ const EventTable = () => {
     });
     setInterestedPersons([]);
   };
-
+ 
   const handleSubmitEditEvent = async (eventId) => {
     const editEvent = {
       title: formData.title,
@@ -127,7 +128,7 @@ const EventTable = () => {
       });
     }
   };
-
+ 
   const handleSubmit = async () => {
     const newEvent = {
       title: formData.title,
@@ -156,7 +157,7 @@ const EventTable = () => {
       description: ''
     });
   };
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -164,14 +165,14 @@ const EventTable = () => {
       [name]: value
     });
   };
-
+ 
   // Logic for pagination
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
   const currentEvents = events?.slice(indexOfFirstEvent, indexOfLastEvent);
-
+ 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+ 
   return (
     <div className='main-events'>
       <h1 style={{ fontFamily: 'Anton, sans-serif', fontSize: '2em', justifyContent: 'center', justifyItems: 'center' }}>EVENTS</h1>
@@ -214,13 +215,13 @@ const EventTable = () => {
         ) : (
         <p><center>No Events Created</center></p>
         )}
-
+ 
         <div className="button-container">
           <button className="new-event-button" onClick={handleCreateNewEvent}>
             Create New Event
           </button>
         </div>
-
+ 
         {/*New Event*/}
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Create New Event</DialogTitle>
@@ -241,7 +242,7 @@ const EventTable = () => {
             <Button onClick={handleSubmit}>Create</Button>
           </DialogActions>
         </Dialog>
-
+ 
         {/*View Event*/}
         <Dialog open={view} onClose={handleClose}>
           <DialogTitle>{selectedEvent?.title}</DialogTitle>
@@ -260,7 +261,7 @@ const EventTable = () => {
               boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
             }}>
               {interestedPersons?.length > 0 ? (
-                interestedPersons.map((person, index) => (
+                interestedPersons?.map((person, index) => (
                   <li
                     key={index}
                     style={{
@@ -270,7 +271,7 @@ const EventTable = () => {
                       borderRadius: '3px',
                     }}
                   >
-                    <strong>Name:</strong> {person.name}, <strong>Email:</strong> {person.email}, <strong>Contact Number:</strong> {person.contactNumber}
+                    <strong>Name:</strong> {person?.name}, <strong>Email:</strong> {person?.email}, <strong>Contact Number:</strong> {person?.contact}
                   </li>
                 ))
               ) : (
@@ -282,7 +283,7 @@ const EventTable = () => {
             <Button onClick={handleClose}>Close</Button>
           </DialogActions>
         </Dialog>
-
+ 
         {/*Edit Event*/}
         <Dialog open={edit} onClose={handleClose}>
           <DialogTitle>Edit Event</DialogTitle>
@@ -323,5 +324,5 @@ const EventTable = () => {
     </div>
   );
 };
-
+ 
 export default EventTable;
