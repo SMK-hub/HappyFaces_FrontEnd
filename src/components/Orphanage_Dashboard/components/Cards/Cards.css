@@ -2,26 +2,30 @@
   display: flex;
   justify-content: space-between;
 }
-
+ 
 .card {
-  background-color: #f0f0f0;
+  background-image: url('../../../../Images/CardImage1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(3, 3, 3);
+  text-align: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  margin-right: 1px;
+  margin: 2rem;
+  cursor: pointer;
+  width: 260px;
 }
-
+ 
 .card:last-child {
-  margin-right: 0;
+  margin-right: -5;
 }
-
+ 
 h2 {
   margin-bottom: 10px;
   font-size: 24px;
 }
-
+ 
 p {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
 }
