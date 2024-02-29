@@ -4,7 +4,7 @@ import Table from "../Table/Table";
 import "./MainDash.css";
 const MainDash = () => {
   return (
-    <div className="MainDash">
+    <div className="MainDash" style={{justifyContent:"center"}}>
       <h1>Admin Dashboard</h1>
       <Cards />
       <Table />

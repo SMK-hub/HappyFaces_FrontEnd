@@ -21,16 +21,16 @@ const Cards = () => {
     fetchData();
   },[])
   return (
-    <div className="cards-container">
-      <div className="card">
+    <div className="admin-cards-container">
+      <div className="admin-card">
         <h2>Orphanages</h2>
         <p>{orphanageCount}</p>
       </div>
-      <div className="card">
+      <div className="admin-card">
         <h2>Donors</h2>
         <p>{donorCount}</p>
       </div>
-      <div className="card">
+      <div className="admin-card">
         <h2>Admins</h2>
         <p>{adminCount}</p>
       </div>

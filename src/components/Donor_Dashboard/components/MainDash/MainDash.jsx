@@ -79,17 +79,16 @@ const MainDash = () => {
           </div>
         </div>
       )}
-      <div style={{ maxHeight: '250px', overflowY: 'auto' }}>
       <table className="transaction-table">
         <thead>
           <tr>
-            <th>Orphanage Name</th>
-            <th>Transaction ID</th>
-            <th>Date</th>
-            <th>Amount</th>
+            <th style={{ position: "sticky", top: 0}}>Orphanage Name</th>
+            <th style={{ position: "sticky", top: 0}}>Transaction ID</th>
+            <th style={{ position: "sticky", top: 0}}>Date</th>
+            <th style={{ position: "sticky", top: 0}}>Amount</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{ maxHeight: "20px", overflowY: "auto" }}>
           {transactions?.map((transaction, index) => (
             <tr key={index}>
               <td>{transaction.orphanageName}</td>
@@ -101,7 +100,7 @@ const MainDash = () => {
         </tbody>
       </table>
       </div>
-    </div>
+    
   );
 };
  

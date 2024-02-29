@@ -5,6 +5,7 @@ import Header from './Header';
 import axios from 'axios';
 import { useUser } from '../../UserContext';
 import { API_BASE_URL } from '../../config';
+import { message } from 'antd';
 
 const SignInAdmin = () => {
   const navigate = useNavigate();
@@ -68,7 +69,16 @@ const SignInAdmin = () => {
       const response = await axios.post(`${API_BASE_URL}/admin/ForgetPassword/${forgotPasswordData.email}/${enteredOtp}/${newPasswordData.password}/${newPasswordData.confirmPassword}`);
       const status = response.status;
       if (status === 200) {
-        alert(response.data);
+        message.success(response.data);
+        setForgotPasswordData({
+          email:"",
+          otp:""
+        })
+        setNewPasswordData({
+          password: '',
+          confirmPassword: '',
+          otp: '',
+        })
         setShowOtpVerificationPopup(false);
         setShowForgotPasswordPopup(false);
       }
@@ -92,28 +102,35 @@ const SignInAdmin = () => {
 
   const handleOtpSubmit = (e) => {
     e.preventDefault();
-    // Add logic to submit email and OTP
     setShowOtpVerificationPopup(true);
   };
 
   const handleNewPasswordSubmit = (e) => {
     e.preventDefault();
-    if(enteredOtp === forgotPasswordData.otp){
-      if (newPasswordData.password === newPasswordData.confirmPassword) {
-      // Add logic to submit new password
-      setShowForgotPasswordPopup(false);
-      setShowNewPasswordPopup(false);
-      setPasswordsMatchError(false);
-      } else {
-        setPasswordsMatchError(true);
-      }
-      }
-      else{
+    const otp = parseInt(enteredOtp);
+    if (forgotPasswordData.otp !== otp) {
         setOtpMatchError(true);
-      }
+        setPasswordsMatchError(false);
+    } else if (newPasswordData.password !== newPasswordData.confirmPassword) {
+        setPasswordsMatchError(true);
+        setOtpMatchError(false);
+    } else {
+        setShowForgotPasswordPopup(false);
+        setShowNewPasswordPopup(false);
+        setPasswordsMatchError(false);
+    }   
   };
 
   const handleBack = () => {
+    setForgotPasswordData({
+      email:"",
+      otp:""
+    })
+    setNewPasswordData({
+      password: '',
+      confirmPassword: '',
+      otp: '',
+    })
     setShowForgotPasswordPopup(false);
     setShowNewPasswordPopup(false);
     setPasswordsMatchError(false);

@@ -4,16 +4,6 @@ import axios from 'axios';
 import { useUser } from '../../../../UserContext';
 import { API_BASE_URL } from '../../../../config';
 
-function createData(name, amount, transactionId, time, status) {
-  return { name, amount, transactionId, time, status };
-}
-
-const rows = [
-  createData('Srikanth', 100, 'TX123', '2024-01-20 08:30', 'SUCCESS'),
-  createData('Muthu', 50, 'TX124', '2024-01-21 12:45', 'PENDING'),
-  // Add more rows as needed
-];
-
 const PaymentDashboard = () => {
   const { userDetails } = useUser();
   const [paymentData, setPaymentData] = useState([]);

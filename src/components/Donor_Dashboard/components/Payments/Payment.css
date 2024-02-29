@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
 }
  
 .donor-dashboard-container {
@@ -51,6 +50,7 @@
  
 .donor-total-amount p {
   margin-right: 10px;
+  font-size: 1.2em;
 }
  
 .donor-total-amount span {

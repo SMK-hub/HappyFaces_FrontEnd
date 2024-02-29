@@ -5,6 +5,7 @@ import Header from "./Header"
 import axios from 'axios';
 import { useUser } from '../../UserContext';
 import { API_BASE_URL } from '../../config'; 
+import { message } from 'antd';
 
 const SignInOrphanage = () => {
   const navigate = useNavigate();
@@ -69,7 +70,16 @@ const SignInOrphanage = () => {
         const response = await axios.post(`${API_BASE_URL}/orphanage/ForgetPassword/${forgotPasswordData.email}/${enteredOtp}/${newPasswordData.password}/${newPasswordData.confirmPassword}`);
         const status = response.status;
         if(status === 200){
-          alert(response.data);
+          message.success(response.data);
+          setForgotPasswordData({
+            email:"",
+            otp:""
+          })
+          setNewPasswordData({
+            password: '',
+            confirmPassword: '',
+            otp: '',
+          })
           setShowOtpVerificationPopup(false);
           setShowForgotPasswordPopup(false);
         }
@@ -100,22 +110,30 @@ const SignInOrphanage = () => {
  
   const handleNewPasswordSubmit = (e) => {
     e.preventDefault();
-    if(enteredOtp === forgotPasswordData.otp){
-      if (newPasswordData.password === newPasswordData.confirmPassword) {
-      // Add logic to submit new password
-      setShowForgotPasswordPopup(false);
-      setShowNewPasswordPopup(false);
-      setPasswordsMatchError(false);
-      } else {
+    const otp = parseInt(enteredOtp);
+    if (forgotPasswordData.otp !== otp) {
+        setOtpMatchError(true);
+        setPasswordsMatchError(false);
+    } else if (newPasswordData.password !== newPasswordData.confirmPassword) {
         setPasswordsMatchError(true);
-      }
-    }
-    else{
-      setOtpMatchError(true);
-    }
+        setOtpMatchError(false);
+    } else {
+        setShowForgotPasswordPopup(false);
+        setShowNewPasswordPopup(false);
+        setPasswordsMatchError(false);
+    } 
   };
  
   const handleBack = () => {
+    setForgotPasswordData({
+      email:"",
+      otp:""
+    })
+    setNewPasswordData({
+      password: '',
+      confirmPassword: '',
+      otp: '',
+    })
     setShowForgotPasswordPopup(false);
     setShowOtpVerificationPopup(false);
     setShowNewPasswordPopup(false);

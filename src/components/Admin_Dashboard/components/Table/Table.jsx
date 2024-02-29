@@ -41,35 +41,39 @@ export default function BasicTable() {
   };
 
   return (
-    <div className="OrphTable" style={{width:'120%' ,maxHeight: '200px', overflowY: 'auto'}}>
-      <h3><center>Recent Orphanages</center></h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Contact</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orphanagesData.map((orphanage, index) => (
-            <tr key={index}>
-              <td>{orphanage.name}</td>
-              <td>{orphanage.location}</td>
-              <td>{orphanage.contact}</td>
-              <td>
-                <span
-                  className="Orphstatus"
-                  // style={makeStyle(orphanage.status)}
-                >
-                  {orphanage.status}
-                </span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="OrphTable" style={{width:'130%' ,maxHeight: '200px', overflowY: 'auto'}}>
+      <h3><center>Unapproved Orphanages</center></h3>
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Contact</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody style={{ maxHeight: "200px", overflowY: "auto" }}>
+    {orphanagesData.length > 0 ? (
+      orphanagesData.map((orphanage, index) => (
+        <tr key={index}>
+          <td>{orphanage.name}</td>
+          <td>{orphanage.location}</td>
+          <td>{orphanage.contact}</td>
+          <td>
+            <span className="Orphstatus">{orphanage.status}</span>
+          </td>
+        </tr>
+      ))
+    ) : (
+      <tr>
+        <td colSpan="4" style={{ textAlign: "center" }}>
+          All orphanages are verified
+        </td>
+      </tr>
+    )}
+  </tbody>
+</table>
+
     </div>
   );
 }

@@ -1,9 +1,9 @@
-.cards-container {
+.admin-cards-container {
   display: flex;
   justify-content: space-between;
 }
 
-.card {
+.admin-card {
   background-image: url('../../../../Images/CardImage1.jpg');
   background-size: cover;
   background-position: center;
@@ -11,12 +11,12 @@
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  margin: 60px;
+  margin: 2rem;
   cursor: pointer;
   width: 260px; /* Adjust the width as needed */
 }
 
-.card:last-child {
+.admin-card:last-child {
   margin-right: -5;
 }
 

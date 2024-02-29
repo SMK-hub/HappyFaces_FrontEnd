@@ -149,18 +149,27 @@ if (error) {
       </thead>
       {/* Table body */}
       <tbody>
-        {paymentData?.map((data, index) => (
-          <tr key={index}>
-            {/* Table cells */}
-            <td>{data?.donorName}</td>
-            <td>Rs.{data?.amount}</td>
-            <td>{data?.transactionId}</td>
-            <td>{data?.dateTime}</td>
-            <td>{data?.orphanageName}</td>
-            <td>{data?.status}</td>
-          </tr>
-        ))}
-      </tbody>
+  {paymentData?.length > 0 ? (
+    paymentData.map((data, index) => (
+      <tr key={index}>
+        {/* Table cells */}
+        <td>{data?.donorName}</td>
+        <td>Rs.{data?.amount}</td>
+        <td>{data?.transactionId}</td>
+        <td>{data?.dateTime}</td>
+        <td>{data?.orphanageName}</td>
+        <td>{data?.status}</td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="6" style={{ textAlign: "center" }}>
+        No donation has been made
+      </td>
+    </tr>
+  )}
+</tbody>
+
     </table>
   </div>
   </div>
@@ -178,14 +187,22 @@ if (error) {
                 </tr>
               </thead>
               <tbody>
-                {requireData.map((data, index) => (
-                  <tr key={index}>
-                    <td>{data.donorName}</td>
-                    <td>{data.orphanageName}</td>
-                    <td>{data.description}</td>
-                  </tr>
-                ))}
-              </tbody>
+  {requireData.length > 0 ? (
+    requireData.map((data, index) => (
+      <tr key={index}>
+        <td>{data.donorName}</td>
+        <td>{data.orphanageName}</td>
+        <td>{data.description}</td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="3" style={{ textAlign: "center" }}>
+        No requirement has been donated
+      </td>
+    </tr>
+  )}
+</tbody>
             </table>
           </div>
         </div>
