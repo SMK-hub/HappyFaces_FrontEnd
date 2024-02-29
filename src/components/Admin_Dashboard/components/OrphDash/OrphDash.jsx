@@ -326,18 +326,17 @@ const handleClosePdfDialog = () => {
             <div className="modal-content">
               <span className="close" onClick={closeViewImagesPopup}>&times;</span>
               <h3>View Images</h3>
-              <ImageList variant="masonry" cols={3} gap={8}>
-                {imageData.map((item) => (
-                  <ImageListItem key={item.id}>
-                    <img
-                      src={pictureUrl(item.image)}
-                      alt={item?.alt}
-                      onClick={openImagePopup}
-                      style={{ cursor: "pointer" }}
-                    />
-                  </ImageListItem>
-                ))}
-              </ImageList>
+              <ImageList variant="masonry" cols={1} gap={8} style={{ maxHeight: "400px", overflowY: "auto" }}>
+  {imageData.map((item) => (
+    <ImageListItem key={item.id} style={{ display: "inline-block", width: "calc(50% - 4px)" }}>
+      <img
+        src={pictureUrl(item.image)}
+        alt={item?.alt}
+        style={{ width: "100%", display: "block", marginBottom: "8px" }}
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
             </div>
           </div>
         )}
