@@ -7,8 +7,6 @@ import '@fortawesome/fontawesome-free/css/all.css';
 // import ImagePopup from "./ImagePopup";
 import axios from "axios";
 import { useUser } from '../../../../UserContext';
-import { API_BASE_URL } from "../../../../config";
-
 
 const PayDash = () => {
 
@@ -19,7 +17,7 @@ const PayDash = () => {
   const [error, setError] = useState(null);
   const fetchDonorData = async(donorId) => {
     try{
-      const response = await axios.get(`${API_BASE_URL}/admin/donor/${donorId}`);
+      const response = await axios.get(`http://localhost:8079/admin/donor/${donorId}`);
       const status = response.status;
       if(status === 200){
         const data=response.data.name;
@@ -33,7 +31,7 @@ const PayDash = () => {
   
   const fetchOrphangeData = async(orpId) => {
     try{
-      const resp = await axios.get(`${API_BASE_URL}/admin/orphanageDetails/${orpId}`);
+      const resp = await axios.get(`http://localhost:8079/admin/orphanageDetails/${orpId}`);
       const stat = resp.status;
       console.log(resp.data);
       if(stat === 200){
@@ -48,7 +46,7 @@ const PayDash = () => {
 useEffect(() => {
   const createData = async() => {
     try{
-      const response = await axios.get(`${API_BASE_URL}/admin/donationList`);
+      const response = await axios.get(`http://localhost:8079/admin/donationList`);
       const status= response.status;
       if(status !== 200){
         throw new Error('Failed to fetch data');
@@ -80,7 +78,7 @@ createData();
 useEffect(() => {
   const createReq = async() => {
     try{
-      const res = await axios.get(`${API_BASE_URL}/admin/requirementList`);
+      const res = await axios.get(`http://localhost:8079/admin/requirementList`);
       const status= res.status;
       if(status !== 200){
         throw new Error('Failed to fetch data');

@@ -50,34 +50,36 @@ export default function BasicTable() {
     <div className="Table">
       <div className="DonationDetailsTable">
         <h3>Donation Details</h3>
-          <Table aria-label="last 4 transactions table">
-            <TableHead>
-              <TableRow sx={{backgroundColor:'lightpink'}}>
-                <TableCell sx={{backgroundColor:'lightpink'}} >Donor Name</TableCell>
-                <TableCell sx={{backgroundColor:'lightpink'}} align="left">Transaction ID</TableCell>
-                <TableCell sx={{backgroundColor:'lightpink'}} align="left">Date</TableCell>
-                <TableCell sx={{backgroundColor:'lightpink'}} align="left">Amount</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {transactions?.length > 0 ? (
-                transactions.map((transaction, index) => (
-                  <TableRow key={index}>
-                    <TableCell>{transaction.donorData.name}</TableCell>
-                    <TableCell align="left">{transaction.transactionId}</TableCell>
-                    <TableCell align="left">{transaction.dateTime}</TableCell>
-                    <TableCell align="left">Rs.{transaction.amount}</TableCell>
-                  </TableRow>
-                ))
-              ) : (
-                <TableRow>
-                  <TableCell colSpan={4} align="center">
-                    No Donation Data
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
+        <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+  <Table aria-label="last 4 transactions table">
+    <TableHead>
+      <TableRow sx={{ backgroundColor: 'lightpink' }}>
+        <TableCell sx={{ backgroundColor: 'lightpink' }}>Donor Name</TableCell>
+        <TableCell sx={{ backgroundColor: 'lightpink' }} align="left">Transaction ID</TableCell>
+        <TableCell sx={{ backgroundColor: 'lightpink' }} align="left">Date</TableCell>
+        <TableCell sx={{ backgroundColor: 'lightpink' }} align="left">Amount</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      {transactions?.length > 0 ? (
+        transactions.map((transaction, index) => (
+          <TableRow key={index}>
+            <TableCell>{transaction.donorData.name}</TableCell>
+            <TableCell align="left">{transaction.transactionId}</TableCell>
+            <TableCell align="left">{transaction.dateTime}</TableCell>
+            <TableCell align="left">Rs.{transaction.amount}</TableCell>
+          </TableRow>
+        ))
+      ) : (
+        <TableRow>
+          <TableCell colSpan={4} align="center">
+            No Donation Data
+          </TableCell>
+        </TableRow>
+      )}
+    </TableBody>
+  </Table>
+</div>
       </div>
     </div>
   );
