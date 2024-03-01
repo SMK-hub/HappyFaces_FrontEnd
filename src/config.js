@@ -1,4 +1,4 @@
-const LOCALHOST = "http://43.204.228.68:8079";
+const LOCALHOST = "http://15.206.70.30:8079";
  
 export const API_BASE_URL = LOCALHOST;
  
