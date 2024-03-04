@@ -83,6 +83,20 @@ const{userDetails}= useUser();
     setOpenPdfDialog(true);
   };
 
+  const downloadCertificate = async (orpId, orphanageName) => {
+    try {
+      const certificateUrl = await fetchOrphanageCertificate(orpId);
+      const link = document.createElement('a');
+      link.href = certificateUrl;
+      link.setAttribute('download', `${orphanageName}_certificate.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.log("Error in Fetching Certificate:", error);
+    }
+  };
+
   const fetchOrphanageCertificate = async (orpId) => {
     try {
       const response = await axios.get(`${API_BASE_URL}/admin/getCertificate/${orpId}`, {
@@ -309,8 +323,11 @@ const handleClosePdfDialog = () => {
               <p className="field-name">Website<span> {selectedOrphanage.web}</span></p>
               <p className="field-name">Description<span> {selectedOrphanage.desc}</span></p>
               <p className="field-name">Images:{" "} <button onClick={openViewImagesPopup}>View Images</button><span></span></p>
-              <p className="field-name">Certificates{" "} <button onClick={()=>handleViewCertificate(selectedOrphanage.orpId)} className="smallButton">View Certificates</button></p>
-            </div>
+              <p className="field-name">Certificates{" "}
+                <button onClick={() => handleViewCertificate(selectedOrphanage.orpId)} className="smallButton">View Certificates</button>
+                <button onClick={() => downloadCertificate(selectedOrphanage.orpId, selectedOrphanage.orphanageName)} className="smallButton">Download Certificates</button>
+              </p>
+          </div>
           </div>
         )}
 
