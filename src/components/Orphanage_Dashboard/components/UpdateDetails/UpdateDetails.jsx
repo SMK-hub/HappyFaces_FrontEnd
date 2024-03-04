@@ -88,56 +88,56 @@ const FormComponent = () => {
       <form>
   <h1>Orphanage Details</h1>
   <label>
-    Orphanage Name<span className="required-star">*</span>:
+    Orphanage Name<span style={{ color: 'red' }}>*</span>:
     <input type="text" name="orphanageName" value={formData.orphanageName} onChange={handleChange} required/>
   </label>
   <label>
-    Director Name:
+    Director Name<span style={{ color: 'red' }}>*</span>:
     <input type="text" name="directorName" value={formData.directorName} onChange={handleChange} required/>
   </label>
   <label>
-    Contact:
+    Contact<span style={{ color: 'red' }}>*</span>:
     <input type="tel" name="contact" value={formData.contact} onChange={handleChange} required/>
   </label>
   <label>
-    Orphanage Email:
+    Orphanage Email<span style={{ color: 'red' }}>*</span>:
     <input type="email" name="orphanageEmail" value={formData.orphanageEmail} onChange={handleChange} required/>
   </label>
   <label>
-    Description:
+    Description<span style={{ color: 'red' }}>*</span>:
     <textarea name="description" value={formData.description} onChange={handleChange} required></textarea>
   </label>
     <h3>Address</h3>
     <label>
-      House Number:
+      House Number<span style={{ color: 'red' }}>*</span>:
       <input type="text" name="house_no" value={formData.address.house_no} onChange={handleAddressChange} required/>
     </label>
     <label>
-      Street Address:
+      Street Address<span style={{ color: 'red' }}>*</span>:
       <input type="text" name="street" value={formData.address.street} onChange={handleAddressChange} required/>
     </label>
     <label>
-      City:
+      City<span style={{ color: 'red' }}>*</span>:
       <input type="text" name="city" value={formData.address.city} onChange={handleAddressChange} required/>
     </label>
     <label>
-      State:
+      State<span style={{ color: 'red' }}>*</span>:
       <input type="text" name="state" value={formData.address.state} onChange={handleAddressChange} required/>
     </label>
     <label>
-      Zip Code:
+      Zip Code<span style={{ color: 'red' }}>*</span>:
       <input type="number" name="postalCode" value={formData.address.postalCode} onChange={handleAddressChange} required/>
     </label>
     <label>
-      Country:
+      Country<span style={{ color: 'red' }}>*</span>:
       <input type="text" name="country" value={formData.address.country} onChange={handleAddressChange} required/>
     </label>
   <label>
-    Website:
+    Website<span style={{ color: 'red' }}>*</span>:
     <input type="text" name="website" value={formData.website} onChange={handleChange} />
   </label>
   <label>
-    Requirements:
+    Requirements<span style={{ color: 'red' }}>*</span>:
     <select name="need" value={formData.requirements.need} onChange={handleRequirementChange} required>
       <option value="">Select Requirement</option>
       <option value="FOOD">FOOD</option>
@@ -147,7 +147,7 @@ const FormComponent = () => {
     </select>
   </label>
   <label>
-    Priority Status:
+    Priority Status<span style={{ color: 'red' }}>*</span>:
     <select name="priority" value={formData.requirements.priority} onChange={handleRequirementChange} required>
       <option value="">Select Priority Status</option>
       <option value="high">High</option>
@@ -155,7 +155,7 @@ const FormComponent = () => {
     </select>
   </label>
   <label>
-    Requirement Description:
+    Requirement Description<span style={{ color: 'red' }}>*</span>:
     <textarea name="description" value={formData.requirements.description} onChange={handleRequirementChange} required></textarea>
   </label>
 
